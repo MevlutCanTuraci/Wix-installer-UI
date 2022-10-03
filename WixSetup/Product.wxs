@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+
+	<!--variable tanımlama bu şekilde-->
+	<?define ProductCode = "{8FF4AD2D-B9EC-40B8-8178-447CE8FB7CDF}"?>
+
+	<Product Id="$(var.ProductCode)" Name="Win App" Language="1033" Version="1.0.0.0" Manufacturer="Logithink Software" UpgradeCode="5b0d1312-348e-492c-9447-de720c151cd8">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="TworkSetup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+
+		<UIRef Id="SetupDialogUI" />
+
+		<Binary Id="bgPic" SourceFile="images/bg.bmp"/>
+		<Binary Id="cancelbtn" SourceFile="images/cancelbtn.png"/>
+		<Property Id="Cancel">cancelbtn</Property>
+
+		<!--<InstallExecuteSequence>
+      <Custom Action='RegistrationInfoCustomAction' Before='InstallFinalize'>NOT Installed</Custom>
+    </InstallExecuteSequence>-->
+
+
+		<!--Bu property uygulamayı bir sistem component'i olacak gösteriyor ve herhangi bir ürün gibi kayıt etmiyor.-->
+		<Property Id='ARPNOMODIFY'>1</Property>
+		<Property Id='ARPNOREMOVE'>1</Property>
+		<Property Id='ARPSYSTEMCOMPONENT'>1</Property>
+		<Property Id='ARPNOREPAIR'>1</Property>
+		<Property Id='ARPNOPRODUCTICON'>1</Property>
+		<!--Bu property uygulamayı bir sistem component'i olacak gösteriyor ve herhangi bir ürün gibi kayıt etmiyor.-->
+
+
+	</Product>
+	
+	
+
+	<Fragment>
+
+		<Property Id="USER32VERSION">
+			<DirectorySearch Id="SystemFolderDriverVersion" Path="C:\app">
+			</DirectorySearch>
+		</Property>
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="USER32VERSION">
+				<Directory Id="INSTALLFOLDER" Name="WinApp" />
+			</Directory>
+		</Directory>
+	</Fragment>
+	
+
+
+	<Fragment>
+		
+
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			
+			<Component Id="Executable" Guid="3252A379-9249-4DB4-9F7F-C6A10F68F88A">
+				<File Id="WinAppExe" Name="WinApp.exe" Source="..\WinApp\bin\Debug\Winapp.exe" Vital="yes" />
+				<RemoveFolder Id="INSTALLDIR" On="uninstall" />
+			</Component>
+
+			
+		</ComponentGroup>
+		
+		
+	</Fragment>
+
+
+</Wix>

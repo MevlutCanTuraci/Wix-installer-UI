@@ -1,0 +1,11 @@
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\bin\Debug\ExampleService.exe.config
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\bin\Debug\ExampleService.exe
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\bin\Debug\ExampleService.pdb
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.ProjectInstaller.resources
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.Service1.resources
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.exe
+C:\Users\DELL\Desktop\WxSetup\WiXUI\ExampleService\obj\Debug\ExampleService.pdb

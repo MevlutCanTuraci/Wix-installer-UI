@@ -1,0 +1,9 @@
+C:\Users\DELL\Desktop\WxSetup\WiXUI\WixSetup\bin\Debug\WixSetup.msi
+C:\Users\DELL\Desktop\WxSetup\WiXUI\WixSetup\bin\Debug\WixSetup.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\ProgressDialog.wixobj
+obj\Debug\SetupDialog.wixobj
+obj\Debug\UserRegDialog.wixobj
+obj\Debug\WixSetup.wixproj.BindContentsFileListnull.txt
+obj\Debug\WixSetup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\WixSetup.wixproj.BindBuiltOutputsFileListnull.txt

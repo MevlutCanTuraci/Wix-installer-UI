@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+
+	<Fragment>
+		
+		<UI Id="SetupDialogUI">
+
+			<Property Id="Install">installbtn</Property>
+			<Binary Id="installbtn" SourceFile="images/installbtn.png"/>
+
+			<DialogRef Id="ProgressDialog"/>
+
+			<TextStyle Id="TahomaHeader" FaceName="Tahoma" Size="18" Bold="yes" />
+			<TextStyle Id="TahomaNormal" FaceName="Tahoma" Size="8" />
+			<TextStyle Id="TahomaCompany" FaceName="Tahoma" Size="9" />
+			<Property Id="DefaultUIFont" Value="TahomaNormal" />
+
+
+
+			<Dialog Id="SetupDialog" Width="400" Height="300" Title="Twork Services Setup">
+
+				<Control Id="background" Type="Bitmap" Text="bgPic" Height="300" Width="400" X="0" Y="0" TabSkip="no" />
+
+				<Control Id="introText" Type="Text" X="86" Y="30" Width="300" Height="32" Transparent="yes" Text="{\TahomaHeader}Welcome to Twork Setup" />
+				<Control Id="explanationText" X="85" Y="78" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Width="250" Height="100" Text="{\TahomaNormal}To continue with the setup click on the Install button. If you choose not to install this application, click on the Cancel button to exit." />
+
+				<Control Id="installButton" Type="PushButton" Text="[Install]" Height="40" Width="144" X="200" Y="215" Bitmap="yes">
+					<Publish Event="EndDialog" Value="Return" />
+				</Control>
+
+
+				<Control Id="cancelButton" Type="PushButton" Text="[Cancel]" Height="40" Width  ="144" X="40" Y="215" Cancel="yes" Bitmap="yes">
+					<Publish Event="EndDialog" Value="Exit" />
+				</Control>
+
+
+				<Control Id="CompanyNameText" X="5" Y="275" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Width="250" Height="100" Text="{\TahomaCompany}Prod by Logithink Software" />
+
+
+			</Dialog>
+
+
+		</UI>
+
+		
+		<InstallUISequence>
+			<Show Dialog="SetupDialog" Before="ExecuteAction" />
+		</InstallUISequence>
+
+
+	</Fragment>
+
+
+
+</Wix>
